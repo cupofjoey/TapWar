@@ -25,9 +25,9 @@
                                 <rect key="frame" x="0.0" y="367" width="375" height="300"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OvH-9n-Pyj">
-                                        <rect key="frame" x="166" y="140" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="139" y="126.5" width="96.5" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" red="0.90925506714986803" green="1" blue="0.90708145870508927" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -43,8 +43,8 @@
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2b-Z4-IvD">
-                                <rect key="frame" x="166" y="323" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="155" y="318" width="65.5" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -52,9 +52,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaC-qb-oBs">
-                                        <rect key="frame" x="166" y="140" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="140" y="126.5" width="96.5" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" red="0.99461625647668395" green="0.99461625647668395" blue="0.99461625647668395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -83,18 +83,24 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomConstraint" destination="D8S-Yn-MSh" id="3Qe-re-ANK"/>
                         <outlet property="bottomScoreLabel" destination="OvH-9n-Pyj" id="7rL-du-HzK"/>
                         <outlet property="countdownLabel" destination="M2b-Z4-IvD" id="3jB-sR-DQH"/>
                         <outlet property="greenView" destination="qyB-a8-G2W" id="RBp-ed-B4k"/>
                         <outlet property="redView" destination="D8S-Yn-MSh" id="3r9-Qd-cKA"/>
+                        <outlet property="topConstraint" destination="qyB-a8-G2W" id="qAK-ap-cPA"/>
                         <outlet property="topScoreLabel" destination="gaC-qb-oBs" id="v1P-xv-eKL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="BOb-3Y-fnp"/>
+                <tapGestureRecognizer id="BOb-3Y-fnp">
+                    <connections>
+                        <action selector="didTapView:" destination="BYZ-38-t0r" id="hfx-qa-aXv"/>
+                    </connections>
+                </tapGestureRecognizer>
                 <tapGestureRecognizer id="fOI-Q4-Sjc"/>
             </objects>
-            <point key="canvasLocation" x="-79.200000000000003" y="138.98050974512745"/>
+            <point key="canvasLocation" x="-338" y="54"/>
         </scene>
     </scenes>
 </document>
