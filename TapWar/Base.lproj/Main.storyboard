@@ -21,23 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qyB-a8-G2W">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaC-qb-oBs">
-                                        <rect key="frame" x="166" y="140" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.61465754533678751" blue="0.060393658734338627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="5i8-wG-VEK"/>
-                                    <constraint firstItem="gaC-qb-oBs" firstAttribute="centerX" secondItem="qyB-a8-G2W" secondAttribute="centerX" id="6pR-ik-UxR"/>
-                                    <constraint firstItem="gaC-qb-oBs" firstAttribute="centerY" secondItem="qyB-a8-G2W" secondAttribute="centerY" id="urR-mN-pyu"/>
-                                </constraints>
-                            </view>
                             <view multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D8S-Yn-MSh">
                                 <rect key="frame" x="0.0" y="367" width="375" height="300"/>
                                 <subviews>
@@ -49,11 +32,15 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.63313633419689119" green="0.081814261583166167" blue="0.073326468893683883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="OvH-9n-Pyj" firstAttribute="centerY" secondItem="D8S-Yn-MSh" secondAttribute="centerY" id="6ma-vc-Uyc"/>
                                     <constraint firstAttribute="height" constant="300" id="ojf-IA-up1"/>
                                     <constraint firstItem="OvH-9n-Pyj" firstAttribute="centerX" secondItem="D8S-Yn-MSh" secondAttribute="centerX" id="sCH-Nc-v6U"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="fOI-Q4-Sjc" appends="YES" id="E7W-1k-8DK"/>
+                                </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2b-Z4-IvD">
                                 <rect key="frame" x="166" y="323" width="42" height="21"/>
@@ -61,6 +48,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qyB-a8-G2W">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaC-qb-oBs">
+                                        <rect key="frame" x="166" y="140" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.61465754533678751" blue="0.060393658734338627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="5i8-wG-VEK"/>
+                                    <constraint firstItem="gaC-qb-oBs" firstAttribute="centerX" secondItem="qyB-a8-G2W" secondAttribute="centerX" id="6pR-ik-UxR"/>
+                                    <constraint firstItem="gaC-qb-oBs" firstAttribute="centerY" secondItem="qyB-a8-G2W" secondAttribute="centerY" id="urR-mN-pyu"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="BOb-3Y-fnp" appends="YES" id="Onl-Jg-cMf"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -74,8 +82,17 @@
                             <constraint firstItem="qyB-a8-G2W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wgg-1J-IuA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bottomScoreLabel" destination="OvH-9n-Pyj" id="7rL-du-HzK"/>
+                        <outlet property="countdownLabel" destination="M2b-Z4-IvD" id="3jB-sR-DQH"/>
+                        <outlet property="greenView" destination="qyB-a8-G2W" id="RBp-ed-B4k"/>
+                        <outlet property="redView" destination="D8S-Yn-MSh" id="3r9-Qd-cKA"/>
+                        <outlet property="topScoreLabel" destination="gaC-qb-oBs" id="v1P-xv-eKL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="BOb-3Y-fnp"/>
+                <tapGestureRecognizer id="fOI-Q4-Sjc"/>
             </objects>
             <point key="canvasLocation" x="-79.200000000000003" y="138.98050974512745"/>
         </scene>
